@@ -50,6 +50,7 @@ ecobee:
 tts:
   - platform: google
 
+person: !include persons.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
