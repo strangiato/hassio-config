@@ -44,8 +44,6 @@ ecobee:
   # Weather prediction
 #  - platform: yr
 
-# this is a test of the git pull add-on
-
 # Text to speech
 tts:
   - platform: google
