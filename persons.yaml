@@ -1,4 +1,8 @@
 - name: Trevor Royer
   id: trevor
+  device_trackers:
+    - device_tracker.trevors_iphone
 - name: Virginia Hesse
   id: virginia
+    device_trackers:
+    - device_tracker.virginia_s_iphone
