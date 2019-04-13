@@ -4,5 +4,5 @@
     - device_tracker.trevors_iphone
 - name: Virginia Hesse
   id: virginia
-    device_trackers:
+  device_trackers:
     - device_tracker.virginia_s_iphone
