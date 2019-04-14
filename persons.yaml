@@ -1,5 +1,6 @@
 - name: Trevor
   id: trevor
+  user_id: !secret trevor_hass_id
   device_trackers:
     - device_tracker.trevors_iphone
 - name: Virginia
