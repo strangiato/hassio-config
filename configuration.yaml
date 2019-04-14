@@ -44,6 +44,11 @@ ecobee:
   # Weather prediction
 #  - platform: yr
 
+speedtestdotnet:
+  monitored_conditions:
+    - download
+    - upload
+
 # Text to speech
 tts:
   - platform: google
