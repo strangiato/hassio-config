@@ -39,10 +39,18 @@ device_tracker:
 ecobee:
   api_key: !secret ecobee_apikey
 
-# Sensors
-#sensor:
-  # Weather prediction
-#  - platform: yr
+roku:
+  - host: 10.83.25.196
+
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
+binary_sensor:
+  - platform: ring
+
+media_player:
+  - platform: plex
 
 speedtestdotnet:
   monitored_conditions:
