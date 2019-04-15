@@ -1,0 +1,5 @@
+  platform: linksys_smart
+  host: 10.83.25.23
+  new_device_defaults:
+    track_new_devices: false
+    hide_if_away: false
