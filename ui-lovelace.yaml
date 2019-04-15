@@ -19,33 +19,9 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: custom:simple-thermostat
+          - type: thermostat
             entity: climate.downstairs
-            modes:
-              auto: false
-              auxHeatOnly: false
-            hide:
-              state: true
-            sensors:
-              - entity: sensor.downstairs_humidity
-                name: Humidity
-              - entity: sensor.downstairs_hvac_runtime
-                name: Runtime
-              - entity: sensor.downstairsthermoper
-                name: Operation
       - type: vertical-stack
         cards:
-          - type: custom:simple-thermostat
+          - type: thermostat
             entity: climate.upstairs
-            modes:
-              auto: false
-              auxHeatOnly: false
-            hide:
-              state: true
-            sensors:
-              - entity: sensor.upstairs_humidity
-                name: Humidity
-              - entity: sensor.upstairs_hvac_runtime
-                name: Runtime
-              - entity: sensor.upstairsthermoper
-                name: Operation
