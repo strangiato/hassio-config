@@ -13,6 +13,9 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+lovelace:
+  mode: yaml
+
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -26,15 +29,6 @@ discovery:
 weather:
   - platform: darksky
     api_key: !secret darksky_apikey
-
-device_tracker:
-  platform: linksys_smart
-  host: 10.83.25.23
-#  username: admin
-#  password: !secret router_password
-  new_device_defaults:
-    track_new_devices: false
-    hide_if_away: false
 
 wemo:
   discovery: true
@@ -67,6 +61,7 @@ speedtestdotnet:
 tts:
   - platform: google
 
+device_tracker: !include device-trackers.yaml
 person: !include persons.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
