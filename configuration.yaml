@@ -39,6 +39,13 @@ device_tracker:
 ecobee:
   api_key: !secret ecobee_apikey
 
+roku:
+  - host: 10.83.25.196
+
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
 # Sensors
 #sensor:
   # Weather prediction
