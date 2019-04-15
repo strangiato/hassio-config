@@ -46,10 +46,8 @@ ring:
   username: !secret ring_username
   password: !secret ring_password
 
-# Sensors
-#sensor:
-  # Weather prediction
-#  - platform: yr
+media_player:
+  - platform: plex
 
 speedtestdotnet:
   monitored_conditions:
