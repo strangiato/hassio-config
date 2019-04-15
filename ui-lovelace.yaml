@@ -1,4 +1,4 @@
-title: Trevors's Home
+title: Trevor's Home
 views:
   - title: Home
     icon: mdi:home-assistant
@@ -7,3 +7,9 @@ views:
         cards:
         - type: weather-forecast
           entity: weather.dark_sky
+      - type: entities
+        title: Network Details
+        show_header_toggle: false
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
