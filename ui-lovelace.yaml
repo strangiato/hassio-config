@@ -7,3 +7,9 @@ views:
         cards:
         - type: weather-forecast
           entity: weather.dark_sky
+      - type: entities
+        title: Network Details
+        show_header_toggle: false
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
