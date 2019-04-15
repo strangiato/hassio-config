@@ -13,3 +13,23 @@ views:
         entities:
           - sensor.speedtest_download
           - sensor.speedtest_upload
+  - title: Thermostats
+    icon: mdi:chart-line
+    id: thermostats
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:simple-thermostat
+            entity: climate.downstairs
+            modes:
+              auto: false
+              auxHeatOnly: false
+            hide:
+              state: true
+            sensors:
+              - entity: sensor.downstairs_humidity
+                name: Humidity
+              - entity: sensor.downstairs_hvac_runtime
+                name: Runtime
+              - entity: sensor.downstairsthermoper
+                name: Operation
