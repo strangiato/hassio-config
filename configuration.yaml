@@ -36,6 +36,12 @@ device_tracker:
     track_new_devices: false
     hide_if_away: false
 
+wemo:
+  discovery: true
+
+tplink:
+  discovery: true
+
 ecobee:
   api_key: !secret ecobee_apikey
 
