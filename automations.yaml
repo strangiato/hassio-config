@@ -1,1 +1,16 @@
-[]
+- alias: 'Turn on lights when roku starts'
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.roku_streaming_stick
+      to: 'playing'
+  condition:
+    condition: or  # 'when dark' condition: either after sunset or before sunrise - equivalent to a state condition on `sun.sun` of `below_horizon`
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: sun
+        before: sunrise
+  action:
+    service: switch.turn_on
+    entity_id: switch.wemo_mini
