@@ -13,6 +13,11 @@ views:
         entities:
           - sensor.speedtest_download
           - sensor.speedtest_upload
+      - type: entities
+        title: Lights
+        entities:
+          - switch.wemo_mini
+          - switch.bedroom_lights
   - title: Thermostats
     icon: mdi:chart-line
     id: thermostats
