@@ -50,6 +50,38 @@ speedtestdotnet:
     - download
     - upload
 
+input_select:
+  trevor_status_dropdown:
+    name: Trevor
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+
+input_select:
+  virginia_status_dropdown:
+    name: Virginia
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+
+sensor:
+  - platform: template
+    sensors:
+      trevor_status:
+        value_template: '{{ states.input_select.trevor_status_dropdown.state }}'
+        friendly_name: 'Trevor'
+      virginia_status:
+        value_template: '{{ states.input_select.virginia_status_dropdown.state }}'
+        friendly_name: 'Virginia'
+
 # Text to speech
 tts:
   - platform: google
