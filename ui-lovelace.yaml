@@ -14,6 +14,10 @@ views:
           - sensor.speedtest_download
           - sensor.speedtest_upload
       - type: entities
+        title: People Status
+        entities:
+          - groups.people_status
+      - type: entities
         title: Lights
         entities:
           - switch.wemo_mini
