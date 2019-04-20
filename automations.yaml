@@ -21,24 +21,24 @@
 - alias: Mark person as just arrived
   trigger:
     - platform: state
-      entity_id: device_tracker.trevor
+      entity_id: device_tracker.trevors_iphones
       from: 'not_home'
       to: 'home'
     - platform: state
-      entity_id: device_tracker.virginia
+      entity_id: device_tracker.virginia_s_iphone
       from: 'not_home'
       to: 'home'
   action:
     - service: input_select.select_option
       data_template:
         entity_id: >
-          {% if trigger.entity_id == 'device_tracker.trevor' %}
+          {% if trigger.entity_id == 'device_tracker.trevors_iphone' %}
             input_select.trevor_status_dropdown
           {% else %}
             input_select.virginia_status_dropdown
           {% endif %}
         option: >
-          {% if trigger.entity_id == 'device_tracker.trevor' %}
+          {% if trigger.entity_id == 'device_tracker.trevors_iphone' %}
             {% if states.input_select.trevor_status_dropdown.state == 'Just Left' %}
               Home
             {% else %}
@@ -86,18 +86,18 @@
 - alias: Mark person as just left
   trigger:
     - platform: state
-      entity_id: device_tracker.trevor
+      entity_id: device_tracker.trevors_iphone
       from: 'home'
       to: 'not_home'
     - platform: state
-      entity_id: device_tracker.virginia
+      entity_id: device_tracker.virginia_s_iphone
       from: 'home'
       to: 'not_home'
   action:
     - service: input_select.select_option
       data_template:
         entity_id: >
-          {% if trigger.entity_id == 'device_tracker.trevor' %}
+          {% if trigger.entity_id == 'device_tracker.trevors_iphone' %}
             input_select.trevor_status_dropdown
           {% else %}
             input_select.virginia_status_dropdown
