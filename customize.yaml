@@ -1,2 +1,5 @@
 switch.wemo_mini:
   friendly_name: Livingroom Lights
+
+sensor.trevor_status:
+  entity_picture: !secret trevor_photo

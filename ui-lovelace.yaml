@@ -15,8 +15,10 @@ views:
           - sensor.speedtest_upload
       - type: entities
         title: People Status
+        show_header_toggle: false
         entities:
-          - groups.people_status
+          - sensor.trevor_status
+          - sensor.virginia_status
       - type: entities
         title: Lights
         entities:
