@@ -15,6 +15,28 @@
     service: switch.turn_on
     entity_id: switch.wemo_mini
 
+- alias: 'Turn off everything when no one is home'
+  initia_state: true
+  triggers:
+    - platform: state
+      entity_id: input_select.trevor_status_dropdown
+      to: 'away'
+    - platform: state
+      entity_id: input_select.virginia_status_dropdown
+      to: 'away'
+  condition:
+    condition: and
+    conditions:
+      - platform: state
+        entity_id: input_select.trevor_status_dropdown
+        to: 'away'
+      - platform: state
+        entity_id: input_select.virginia_status_dropdown
+        to: 'away'
+  action:
+    service: switch.turn_off
+    entity_id: group.all_switches
+
 # -----------------
 # Non-bianary presence detection
 # -----------------
