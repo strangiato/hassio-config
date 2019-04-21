@@ -60,8 +60,6 @@ input_select:
       - Away
       - Extended Away
     initial: Home
-
-input_select:
   virginia_status_dropdown:
     name: Virginia
     options:
