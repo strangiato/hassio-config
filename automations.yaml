@@ -18,10 +18,10 @@
   trigger:
     - platform: state
       entity_id: input_select.trevor_status_dropdown
-      to: 'away'
+      state: 'away'
     - platform: state
       entity_id: input_select.virginia_status_dropdown
-      to: 'away'
+      state: 'away'
   condition:
     condition: and
     conditions:
