@@ -25,10 +25,10 @@
   condition:
     condition: and
     conditions:
-      - platform: state
+      - condition: state
         entity_id: input_select.trevor_status_dropdown
         to: 'away'
-      - platform: state
+      - condition: state
         entity_id: input_select.virginia_status_dropdown
         to: 'away'
   action:
