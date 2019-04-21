@@ -21,7 +21,7 @@
 - alias: Mark person as just arrived
   trigger:
     - platform: state
-      entity_id: device_tracker.trevors_iphones
+      entity_id: device_tracker.trevors_iphone
       from: 'not_home'
       to: 'home'
     - platform: state
