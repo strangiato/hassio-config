@@ -15,7 +15,7 @@
     entity_id: switch.wemo_mini
 
 - alias: 'Turn off everything when no one is home'
-  triggers:
+  trigger:
     - platform: state
       entity_id: input_select.trevor_status_dropdown
       to: 'away'
