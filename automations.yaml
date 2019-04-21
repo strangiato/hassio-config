@@ -1,5 +1,4 @@
 - alias: 'Turn on lights when roku starts'
-  initial_state: true
   trigger:
     - platform: state
       entity_id: media_player.roku_streaming_stick
@@ -16,7 +15,6 @@
     entity_id: switch.wemo_mini
 
 - alias: 'Turn off everything when no one is home'
-  initia_state: true
   triggers:
     - platform: state
       entity_id: input_select.trevor_status_dropdown
