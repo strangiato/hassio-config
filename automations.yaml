@@ -18,19 +18,19 @@
   trigger:
     - platform: state
       entity_id: input_select.trevor_status_dropdown
-      state: 'away'
+      to: 'away'
     - platform: state
       entity_id: input_select.virginia_status_dropdown
-      state: 'away'
+      to: 'away'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: input_select.trevor_status_dropdown
-        to: 'away'
+        state: 'away'
       - condition: state
         entity_id: input_select.virginia_status_dropdown
-        to: 'away'
+        state: 'away'
   action:
     service: switch.turn_off
     entity_id: group.all_switches
