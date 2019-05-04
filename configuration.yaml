@@ -86,8 +86,8 @@ history:
       - automation
 
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 device_tracker: !include device-trackers.yaml
 person: !include persons.yaml
