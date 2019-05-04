@@ -85,6 +85,8 @@ history:
     domains:
       - automation
 
+# test git pull
+
 # Text to speech
 #tts:
 #  - platform: google
