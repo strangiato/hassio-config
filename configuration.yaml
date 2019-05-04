@@ -80,6 +80,11 @@ sensor:
         value_template: '{{ states.input_select.virginia_status_dropdown.state }}'
         friendly_name: 'Virginia'
 
+history:
+  exclude:
+    domains:
+      - automation
+
 # Text to speech
 tts:
   - platform: google
